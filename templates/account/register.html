@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+
+<div class="container content">
+
+	
+        <div class="row justify-content-center">
+    	<div class="col-lg-4 col-md-6 col-sm-8">
+
+
+	            <h4>Create new account</h4>
+		
+				<form method="POST">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<button type="submit" class="btn-outline-secondary btn btn-sm">
+						Submit
+					</button>
+
+				</form>
+		
+		</div>
+		</div>
+
+</div>
+<script>
+$('#signupmenu').css('visibility', 'hidden')
+
+</script>
+{%endblock%}
